@@ -23,6 +23,7 @@
 | :---: | :--- | :--- | :---: |
 | **ЛР №1** | Межпроцессное взаимодействие, вариант 5: родитель и потомок, общение через каналы, фильтр составных чисел | `pipe`, `fork`, `dup2`, `execve`, `waitpid` | [`LAB1`](LAB1) |
 | **ЛР №2** | Многопоточность, вариант 5: чётно-нечётная сортировка Бетчера, исследование ускорения и эффективности | `pthread_create`, `pthread_join`, `pthread_barrier_*`, `clock_gettime` | [`LAB2`](LAB2) |
+| **ЛР №3** | Shared memory, вариант 5: переделка ЛР №1 на именованную разделяемую память и семафоры (server и client) | `shm_open`, `mmap`, `sem_open`, `sem_timedwait` | [`LAB3`](LAB3) |
 
 ## 🗂 Структура
 
@@ -39,6 +40,12 @@
 │   ├── CMakeLists.txt
 │   ├── Report_Lab2.docx
 │   └── README.md
+├── LAB3/
+│   ├── server.c
+│   ├── client.c
+│   ├── CMakeLists.txt
+│   ├── Report_Lab3.docx
+│   └── README.md
 ├── .gitignore
 └── README.md
 ```
@@ -48,7 +55,7 @@
 Требования: `CMake` ≥ 4.2, компилятор C с поддержкой C23, Linux/WSL (POSIX).
 
 ```bash
-cd LAB1            # или LAB2
+cd LAB1            # или LAB2, LAB3
 mkdir cmake-build-debug && cd cmake-build-debug
 cmake .. && make
 ```
